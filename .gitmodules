@@ -1,0 +1,3 @@
+[submodule "kondorfa"]
+	path = kondorfa
+	url = https://github.com/Dirfentos/kondorfa.git
