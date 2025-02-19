@@ -17,3 +17,19 @@ Route::get('/history', function () {
 Route::get('/places', function () {
     return view('places');
 })->name('places');
+
+Route::get('/services', function () {
+    return view('services');
+})->name('services');
+
+Route::get('/associations', function () {
+    return view('associations');
+})->name('associations');
+
+Route::get('/gallery', function () {
+    return view('gallery');
+})->name('gallery');
+
+Route::get('/programs', function () {
+    return view('programs');
+})->name('programs');

@@ -13,16 +13,16 @@
             <a class="nav-link fs-5" href="{{ route('places') }}" style="color: white;">Látnivalók</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link fs-5" href="#" style="color: white;">Szolgáltatások</a>
+            <a class="nav-link fs-5" href="{{ route('services') }}" style="color: white;">Szolgáltatások</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link fs-5" href="#" style="color: white;">Egyesületek</a>
+            <a class="nav-link fs-5" href="{{ route('associations') }}" style="color: white;">Egyesületek</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link fs-5" href="#" style="color: white;">Galéria</a>
+            <a class="nav-link fs-5" href="{{ route('gallery') }}" style="color: white;">Galéria</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link fs-5" href="#" style="color: white;">Programajánlók</a>
+            <a class="nav-link fs-5" href="{{ route('programs') }}" style="color: white;">Programajánlók</a>
           </li>
         </ul>
       </div>

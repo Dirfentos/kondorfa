@@ -15,6 +15,10 @@
 
         <h3 style="text-align: center">Kondorfa története</h3>
 
+        <div class="col-md-4">
+            <img src="images/cimer.png" class="img-fluid float-start me-3" alt="Kép">
+        </div>
+
        <p>A szentgotthárdi apátság által alapított falu első okleveles említése 1350-ből származik Gardunfalva néven. Később ez változott Gradendorf, Grotendorf-ra, majd pedig egy család neve után Kondorfalva, Kondorfa lett. (A kondorfai dialektus szerint: „Kandorfa”.) Az itt élő Kondor család idővel kihalt.
 
         Az 1599 –1601 évi adójegyzék szerint evangélikus lelkésze volt a községnek. Ma a lakosság 98%-a római katolikus vallású, csupán 2–3 család református. A falu büszkesége a katolikus templom, ami 1850 –1851-ben épült, titulusa: Szent Lukács. Korábban fatemplom állt a helyén. A XIX. századi iskolaépület jelenleg Szentendrén látható, a Skanzenben. A falu ma három részből áll: Alvég, Fővég, Hegy.
