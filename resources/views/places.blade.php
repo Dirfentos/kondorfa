@@ -11,7 +11,7 @@
 
     <div class="container p-3" style="background-color:white; color: black; font-size: 24px;">
 
-        <h3 style="text-align: center">Látnivalók</h3>
+        <h1 style="text-align: center">Látnivalók</h1>
 
         <div class="container mb-5 mt-4">
             <div class="row">

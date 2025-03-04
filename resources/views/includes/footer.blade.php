@@ -6,7 +6,7 @@
 
                 <ul>
                     <li style="font-size:12px; color: white;">9943, Kondorfa Alvég u. 1.</li>
-                    <li style="font-size:12px; color: white;">+3694428013</li>
+                    <li style="font-size:12px; color: white;">+3694428103</li>
                     <li style="font-size:12px; color: white;">hivatal@kondorfa.hu</li>
                 </ul>
                     
