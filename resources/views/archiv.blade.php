@@ -20,31 +20,40 @@
               @foreach ($imageFiles as $image)
                   <div class="col-12 col-sm-6 col-md-4 mb-4">
                       <div class="card" style="width: 18rem;">
-                          <img src="{{ asset('images/archiv/' . basename($image)) }}" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="{{ basename($image) }}" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('images/archiv/' . basename($image)) }}">
-                          <div class="card-body">
-                              <p class="card-text">{{ basename($image) }}</p>
-                              <a href="{{ route('archiv') }}" class="stretched-link"></a>
-                          </div>
+                          <img src="{{ asset('images/archiv/' . basename($image)) }}" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="{{ basename($image) }}" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="{{ asset('images/archiv/' . basename($image)) }}">
+
                       </div>
                   </div>
               @endforeach
           </div>
-        </div>
-        
-      <!-- Modal -->
-      <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="" id="modalImage" class="img-fluid" alt="Nagy kép">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezárás</button>
-                </div>
-            </div>
-        </div>
       </div>
-
+      
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" style="">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="imageModalLabel">Kép megtekintése</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <img id="modalImage" src="" class="img-fluid" alt="Nagyított kép">
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <style>
+          .modal-body {
+              text-align: center;
+          }
+      
+          #modalImage {
+              width: 100%;
+              height: auto;
+              max-height: 150vh; /* Növelt magasság */
+              object-fit: contain;
+          }
+      </style>
 
     </div>
 

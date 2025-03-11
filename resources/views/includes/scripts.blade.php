@@ -21,14 +21,23 @@
     });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
 <script>
-    $('#imageModal').on('show.bs.modal', function (event) {
-        var img = $(event.relatedTarget); // A kattintott kép
-        var imageSrc = img.data('image'); // A kép forrása
-        var modal = $(this);
-        modal.find('.modal-body img').attr('src', imageSrc);
+    document.addEventListener('DOMContentLoaded', function () {
+        var imageModal = document.getElementById('imageModal');
+        if (imageModal) {  // Ellenőrizzük, hogy a modális ablak létezik
+            imageModal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget;  // A kattintott kép
+                var imageSrc = button.getAttribute('data-image');  // A kép forrása
+                var modalImage = imageModal.querySelector('#modalImage');
+                modalImage.setAttribute('src', imageSrc);  // A modális kép src attribútumának beállítása
+            });
+        }
     });
 </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('js/bundle.js') }}"></script>
+
+
