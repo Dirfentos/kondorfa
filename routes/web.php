@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\GalleryController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,15 +27,19 @@ Route::get('/associations', function () {
     return view('associations');
 })->name('associations');
 
+
 Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
 
-Route::get('/gallery/archiv', function () {
-    return view('archiv');
-})->name('archiv');
+Route::get('/gallery/archiv', [GalleryController::class, 'archiv'])->name('archiv');
+
+
 
 
 Route::get('/programs', function () {
     return view('programs');
 })->name('programs');
+
+
+

@@ -17,13 +17,14 @@
           <div class="row">
             <!-- Kártya 1 -->
             <div class="col-12 col-sm-6 col-md-4">
-              <div class="card" style="width: 18rem;">
-                <img src="images/archiv2.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
+              <a href="{{ route('archiv') }}" class="card" style="width: 18rem; text-decoration: none; color: inherit;">
+                <img src="images/archiv2.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="Archív képek">
                 <div class="card-body">
                   <p class="card-text">Archív képek</p>
                 </div>
-              </div>
+              </a>
             </div>
+            
             
             <!-- Kártya 2 -->
             <div class="col-12 col-sm-6 col-md-4">
