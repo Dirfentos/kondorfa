@@ -72,9 +72,9 @@
               <!-- Kártya 3 -->
               <div class="col-12 col-sm-6 col-md-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="images/kereszt3.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="...">
+                  <img src="images/boleny1.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="...">
                   <div class="card-body">
-                    <p class="card-text">Ez a kereszt településünk központjában található.</p>
+                    <p class="card-text">Településünk mellett található egy bölényrezervátum</p>
                   </div>
                 </div>
               </div>

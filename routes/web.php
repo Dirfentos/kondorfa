@@ -30,6 +30,11 @@ Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
 
+Route::get('/gallery/archiv', function () {
+    return view('archiv');
+})->name('archiv');
+
+
 Route::get('/programs', function () {
     return view('programs');
 })->name('programs');
