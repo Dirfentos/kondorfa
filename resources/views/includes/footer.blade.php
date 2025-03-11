@@ -8,15 +8,18 @@
                     <li style="font-size:12px; color: white;">9943, Kondorfa Alvég u. 1.</li>
                     <li style="font-size:12px; color: white;">+3694428103</li>
                     <li style="font-size:12px; color: white;">hivatal@kondorfa.hu</li>
-                </ul>
-                    
-               
+                </ul>                
             </div>
-            <div class="col-md-6 text-md-end">
-                <h6 style="color: white;">Kövess minket</h6>
-                <a href="https://www.facebook.com/profile.php?id=100070319796824" class="text-black me-3" style="color: white;" target="_blank"><i class="fab fa-facebook"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" ></i> Facebook</a>
 
+            <div class="col-md-6 text-md-end">
+                <h6 class="text-white">Kövess minket</h6>
+                <a href="https://www.facebook.com/profile.php?id=100070319796824"
+                   class="text-white me-3 text-decoration-none"
+                   target="_blank">
+                    <i class="fab fa-facebook-f me-1"></i> Facebook
+                </a>
             </div>
+            
         </div>
     </div>
 </footer>

@@ -23,17 +23,39 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var imageModal = document.getElementById('imageModal');
-        if (imageModal) {  // Ellenőrizzük, hogy a modális ablak létezik
-            imageModal.addEventListener('show.bs.modal', function (event) {
-                var button = event.relatedTarget;  // A kattintott kép
-                var imageSrc = button.getAttribute('data-image');  // A kép forrása
-                var modalImage = imageModal.querySelector('#modalImage');
-                modalImage.setAttribute('src', imageSrc);  // A modális kép src attribútumának beállítása
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    let images = document.querySelectorAll('.modal-image');
+    let modalImage = document.getElementById('modalImage');
+    let prevButton = document.getElementById('prevButton');
+    let nextButton = document.getElementById('nextButton');
+    let currentIndex = 0;
+
+    // Képre kattintva betöltjük a modális ablakba
+    images.forEach((img, index) => {
+        img.addEventListener('click', function () {
+            let imageSrc = this.getAttribute('data-image');
+            modalImage.setAttribute('src', imageSrc);
+            currentIndex = index;
+        });
+    });
+
+    // Előző kép megjelenítése
+    prevButton.addEventListener('click', function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            modalImage.setAttribute('src', images[currentIndex].getAttribute('data-image'));
         }
     });
+
+    // Következő kép megjelenítése
+    nextButton.addEventListener('click', function () {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            modalImage.setAttribute('src', images[currentIndex].getAttribute('data-image'));
+        }
+    });
+});
+
 </script>
 
 

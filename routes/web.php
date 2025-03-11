@@ -32,10 +32,11 @@ Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
 
-Route::get('/gallery/archiv', [GalleryController::class, 'archiv'])->name('archiv');
+Route::get('/gallery/archiv', [GalleryController::class, 'archiv'])->name('gallery.archiv');
 
+Route::get('/gallery/hetkoznap', [GalleryController::class, 'hetkoznap'])->name('gallery.hetkoznap');
 
-
+Route::get('/gallery/kereszt', [GalleryController::class, 'kereszt'])->name('gallery.kereszt');
 
 Route::get('/programs', function () {
     return view('programs');

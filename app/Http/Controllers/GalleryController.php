@@ -12,6 +12,18 @@ class GalleryController extends Controller
     public function archiv()
     {
         $imageFiles = File::files(public_path('images/archiv'));
-        return view('archiv', compact('imageFiles'));
+        return view('gallery.archiv', compact('imageFiles'));
+    }
+
+    public function hetkoznap()
+    {
+        $imageFiles = File::files(public_path('images/hetkoznap'));
+        return view('gallery.hetkoznap', compact('imageFiles'));
+    }
+
+    public function kereszt()
+    {
+        $imageFiles = File::files(public_path('images/kereszt'));
+        return view('gallery.kereszt', compact('imageFiles'));
     }
 }

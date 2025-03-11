@@ -38,7 +38,7 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h3 class="card-title">Sportegyesület</h3>
-                  <p class="card-text">Focicsapatunk 2019-es újraalapítása óta kétszer is sikerült a dobóra felkerüliük, tavaly pedig 5 pont hátránnyal lettek negyedikek. 2021/2022-es szezonban másodikak, majd a következő 2022/2023-as szezon sikerült az aranyérmet bezseblniük. Sportegyesület elnöke: Szalai Marietta. </p>
+                  <p class="card-text">Focicsapatunk 2019-es újraalapítása óta kétszer is sikerült a dobóra felkerüliük, tavaly pedig 5 pont hátránnyal lettek negyedikek. 2021/2022-es szezonban másodikak, majd a következő 2022/2023-as szezon sikerült az aranyérmet bezsebelniük. Sportegyesület elnöke: Szalai Marietta. </p>
                   <p class="card-text"><small class="text-body-secondary">Elérhetőség: <a href="https://www.facebook.com/KondorfaSE">Facebook</a></small></p>
                 </div>
               </div>
@@ -53,7 +53,7 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h3 class="card-title">Kondorfáért Egyesület</h3>
-                  <p class="card-text">Néhány lelkel falubeli alapította 2024-ben az egyesületet azzal a céllal, hogy a falubeliek összefogásával közösen teremtsenek értékeket a faluban, illetve programokkal gazdagítsák a falu életét. Legutóbb 2025 március elején tartottak egy Farsangi bált. Civil egyesület elnöke: Bödő Zoltánné Betti.</p>
+                  <p class="card-text">Néhány lelkes falubeli alapította 2024-ben az egyesületet azzal a céllal, hogy a falubeliek összefogásával közösen teremtsenek értékeket a faluban, illetve programokkal gazdagítsák a falu életét. Legutóbb 2025 március elején tartottak egy Farsangi bált. Civil egyesület elnöke: Bödő Zoltánné Betti.</p>
                   <p class="card-text"><small class="text-body-secondary">Elérhetőségek: <a href="https://www.facebook.com/profile.php?id=61562102100107">Facebook</a></small></p>
                 </div>
               </div>

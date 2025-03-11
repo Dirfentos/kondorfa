@@ -17,7 +17,7 @@
           <div class="row">
             <!-- Kártya 1 -->
             <div class="col-12 col-sm-6 col-md-4">
-              <a href="{{ route('archiv') }}" class="card" style="width: 18rem; text-decoration: none; color: inherit;">
+              <a href="{{ route('gallery.archiv') }}" class="card" style="width: 18rem; text-decoration: none; color: inherit;">
                 <img src="images/archiv2.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="Archív képek">
                 <div class="card-body">
                   <p class="card-text">Archív képek</p>
@@ -28,8 +28,8 @@
             
             <!-- Kártya 2 -->
             <div class="col-12 col-sm-6 col-md-4">
-              <a class="card" style="width: 18rem;">
-                <img src="images/hetkoznap1.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
+              <a href="{{ route('gallery.hetkoznap') }}" class="card" style="width: 18rem; text-decoration: none; color: inherit;">
+                <img src="images/hetkoznap1.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="Hétköznapok">
                 <div class="card-body">
                   <p class="card-text">"Szürke" Hétköznapok</p>
                 </div>
@@ -38,12 +38,12 @@
             
             <!-- Kártya 3 -->
             <div class="col-12 col-sm-6 col-md-4">
-              <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
+              <a href="{{ route('gallery.kereszt') }}" class="card" style="width: 18rem; text-decoration: none; color: inherit;">
+                <img src="images/kereszt1.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="Kereszt képek">
                 <div class="card-body">
-                  <p class="card-text">Képek 3</p>
+                  <p class="card-text">Keresztek</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
             <!-- Kártya 1 -->
             <div class="col-12 col-sm-6 col-md-4">
               <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
+                <img src="images/kerdojel.jfif" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
                 <div class="card-body">
                   <p class="card-text">Képek 4</p>
                 </div>
@@ -63,7 +63,7 @@
             <!-- Kártya 2 -->
             <div class="col-12 col-sm-6 col-md-4">
               <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
+                <img src="images/kerdojel.jfif" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
                 <div class="card-body">
                   <p class="card-text">Képek 5</p>
                 </div>
@@ -73,7 +73,7 @@
             <!-- Kártya 3 -->
             <div class="col-12 col-sm-6 col-md-4">
               <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
+                <img src="images/kerdojel.jfif" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
                 <div class="card-body">
                   <p class="card-text">Képek 6</p>
                 </div>
