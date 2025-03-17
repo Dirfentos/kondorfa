@@ -43,8 +43,7 @@
                   Szerda: ZÁRVA <br>
                   Csütörtök: 16:00 - 19:00 <br>
                   Péntek: 15:00 - 20:00 <br>
-              </p>
-                
+                </p>
               </blockquote>
             </div>
           </div>
@@ -61,11 +60,11 @@
                   Csütörtök: 9:00 - 16:00 <br>
                   Péntek: 9:00 - 13:30 
               </p>
-                
               <footer class="blockquote-footer">
                 Tel.:+3694428103 <br>
                 Email:hivatal@kondorfa.hu
               </footer>
+
               </blockquote>
             </div>
           </div>
@@ -79,8 +78,7 @@
                 <p>Hétfő - Péntek:<br>
                   7:30 – 9:30 <br>
                   13:30 - 15:30 <br>
-              </p>
-                
+              </p>                
               </blockquote>
             </div>
           </div>

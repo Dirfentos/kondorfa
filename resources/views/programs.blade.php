@@ -17,40 +17,39 @@
 
         <div class="card my-4">
             <div class="card-header">
-              Program
+              Tabata és HIIT Edzés
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <p>A well-known quote, contained in a blockquote element.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                <img src="images/news/03.16.jpg" alt="" srcset="">
+
+                <footer class="blockquote-footer d-flex align-items-center">
+                  Közzétéve: 2025. március 16.
+                </footer>
               </blockquote>
             </div>
         </div>
 
         <div class="card my-4">
             <div class="card-header">
-              Program
+              Farsangi bál
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <p>A well-known quote, contained in a blockquote element.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                <p>
+                  Farsangi bálba hív a három egyesület! <br>
+                  A Kondorfa SE hivatalos oldala ,Önkéntes Tűzoltó Egyesület Kondorfa és a Kondorfáért Egyesület sok szeretettel meghívja Önt és kedves családját a március 1.-n tartandó Farsangi mulatságba!🎉🤹🏻‍♂️🪗🪄💃🏻 <br>
+                  Mindenkit Szeretettel Várunk!
+                </p>
+
+                  <img src="images/news/01.21.jpg" alt="" srcset=""> <br>
+
+                  <footer class="blockquote-footer d-flex align-items-center">
+                    Közzétéve: 2025. január 21.
+                  </footer>
               </blockquote>
             </div>
         </div>
-
-        <div class="card my-4">
-            <div class="card-header">
-              Program
-            </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                <p>A well-known quote, contained in a blockquote element.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-              </blockquote>
-            </div>
-        </div>
-
 
     </div>
 

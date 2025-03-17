@@ -10,6 +10,7 @@ Route::get('/', function () {
 
 Route::get('/weather', [WeatherController::class, 'getWeather']);
 
+
 Route::get('/history', function () {
     return view('history');
 })->name('history');
