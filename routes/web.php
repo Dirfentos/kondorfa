@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/weather', [WeatherController::class, 'getWeather']);
+Route::get('/', [WeatherController::class, 'getWeather'])->name('welcome');
 
 
 Route::get('/history', function () {

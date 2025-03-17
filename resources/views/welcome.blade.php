@@ -24,7 +24,10 @@
 
     <div class="container p-3" style="background-color:white; color: black; font-size: 24px; text-align: center;">
         
-        @include('includes.weather') <!-- Időjárás div -->
+      <div> @include('includes.weather', ['weatherData' => $weatherData ?? null, 'error' => $error ?? null])</div>
+
+     
+
 
         <hr>
 
