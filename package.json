@@ -9,7 +9,7 @@
         "@babel/core": "^7.26.9",
         "@babel/preset-env": "^7.26.9",
         "autoprefixer": "^10.4.20",
-        "axios": "^1.8.2",
+        "axios": "^1.8.3",
         "babel-loader": "^10.0.0",
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^1.2.0",

@@ -1,24 +1,30 @@
 <script>
-    // Kép és szöveg megjelenítése késleltetve
+    document.addEventListener("DOMContentLoaded", function () {
     const imageArea = document.querySelector('.position-relative');
     const overlay = document.getElementById('overlay');
     const textOverlay = document.getElementById('text-overlay');
 
-    imageArea.addEventListener('mouseenter', () => {
-        setTimeout(() => {
-            overlay.style.visibility = 'visible';
-            textOverlay.style.visibility = 'visible';
-            overlay.style.opacity = '1';
-            textOverlay.style.opacity = '1';
-        }, 500); // 500 ms késleltetés
-    });
+    if (imageArea && overlay && textOverlay) {
+        imageArea.addEventListener('mouseenter', () => {
+            setTimeout(() => {
+                overlay.style.visibility = 'visible';
+                textOverlay.style.visibility = 'visible';
+                overlay.style.opacity = '1';
+                textOverlay.style.opacity = '1';
+            }, 500);
+        });
 
-    imageArea.addEventListener('mouseleave', () => {
-        overlay.style.opacity = '0';
-        textOverlay.style.opacity = '0';
-        overlay.style.visibility = 'hidden';
-        textOverlay.style.visibility = 'hidden';
-    });
+        imageArea.addEventListener('mouseleave', () => {
+            overlay.style.opacity = '0';
+            textOverlay.style.opacity = '0';
+            overlay.style.visibility = 'hidden';
+            textOverlay.style.visibility = 'hidden';
+        });
+    } else {
+        console.warn("Figyelmeztetés: Az imageArea, overlay vagy textOverlay elem nem található.");
+    }
+});
+
 </script>
 
 
@@ -30,6 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let nextButton = document.getElementById('nextButton');
     let currentIndex = 0;
 
+    if (images.length === 0 || !modalImage) {
+        console.warn("Figyelmeztetés: Nincsenek képek vagy a modális ablak nem található.");
+        return;
+    }
+
     // Képre kattintva betöltjük a modális ablakba
     images.forEach((img, index) => {
         img.addEventListener('click', function () {
@@ -40,21 +51,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Előző kép megjelenítése
-    prevButton.addEventListener('click', function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-            modalImage.setAttribute('src', images[currentIndex].getAttribute('data-image'));
-        }
-    });
+    if (prevButton) {
+        prevButton.addEventListener('click', function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                modalImage.setAttribute('src', images[currentIndex].getAttribute('data-image'));
+            }
+        });
+    } else {
+        console.warn("Figyelmeztetés: A prevButton elem nem található.");
+    }
 
     // Következő kép megjelenítése
-    nextButton.addEventListener('click', function () {
-        if (currentIndex < images.length - 1) {
-            currentIndex++;
-            modalImage.setAttribute('src', images[currentIndex].getAttribute('data-image'));
-        }
-    });
+    if (nextButton) {
+        nextButton.addEventListener('click', function () {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+                modalImage.setAttribute('src', images[currentIndex].getAttribute('data-image'));
+            }
+        });
+    } else {
+        console.warn("Figyelmeztetés: A nextButton elem nem található.");
+    }
 });
+
 
 </script>
 
