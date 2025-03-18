@@ -1,78 +1,104 @@
-<div class="container mt-4">
-    <div class="d-flex align-items-center">
-        <button class="btn btn-outline-primary btn-sm me-2" onclick="prevMonth()">⬅</button>
-        <h5 id="currentMonth" class="mb-0"></h5>
-    </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    #calendar {
+        width: 800px;
+        height: 400px;
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 2px;
+        margin-top: 10px;
+    }
+    .day {
+        padding: 5px;
+        border: 1px solid #ccc;
+        min-height: 30px;
+        position: relative;
+    }
+    .event-marker {
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+    }
+</style>
 
-    <div class="border p-2 mt-2" style="width: 200px; height: 200px; overflow: hidden;">
-        <table class="table table-bordered text-center m-0">
-            <thead class="table-light">
-                <tr>
-                    <th>H</th>
-                    <th>K</th>
-                    <th>Sz</th>
-                    <th>Cs</th>
-                    <th>P</th>
-                    <th>Sz</th>
-                    <th>V</th>
-                </tr>
-            </thead>
-            <tbody id="calendar-body"></tbody>
-        </table>
+<div id="calendar">
+    <div class="calendar-header">
+        <button onclick="prevMonth()">⬅</button>
+        <span id="calendar-title"></span>
+        <button onclick="nextMonth()">➡</button>
     </div>
+    <div class="calendar-grid" id="calendar-grid"></div>
 </div>
 
 <script>
-    let currentDate = new Date();
+    let currentYear = new Date().getFullYear();
+    let currentMonth = new Date().getMonth() + 1;
 
-    function renderCalendar() {
-        const monthNames = ["Jan", "Feb", "Már", "Ápr", "Máj", "Jún", "Júl", "Aug", "Szept", "Okt", "Nov", "Dec"];
-        const year = currentDate.getFullYear();
-        const month = currentDate.getMonth();
-        document.getElementById("currentMonth").innerText = `${monthNames[month]} ${year}`;
+    function loadCalendar(year, month) {
+        $("#calendar-title").text(`${year} - ${month}`);
 
-        const firstDay = new Date(year, month, 1).getDay();
-        const lastDate = new Date(year, month + 1, 0).getDate();
+        let daysInMonth = new Date(year, month, 0).getDate();
+        let firstDay = new Date(year, month - 1, 1).getDay();
 
-        let days = [];
-        let row = [];
-        let startDay = (firstDay === 0) ? 6 : firstDay - 1;
+        let calendarGrid = $("#calendar-grid");
+        calendarGrid.empty();
 
-        for (let i = 0; i < startDay; i++) {
-            row.push("");
+        // Üres helyek a hónap első napja előtt
+        for (let i = 0; i < firstDay; i++) {
+            calendarGrid.append('<div class="day"></div>');
         }
 
-        for (let day = 1; day <= lastDate; day++) {
-            row.push(day);
-            if (row.length === 7) {
-                days.push(row);
-                row = [];
-            }
+        // Napok generálása
+        for (let day = 1; day <= daysInMonth; day++) {
+            calendarGrid.append(`<div class="day" id="day-${day}">${day}</div>`);
         }
 
-        if (row.length > 0) {
-            while (row.length < 7) {
-                row.push("");
-            }
-            days.push(row);
-        }
-
-        let calendarHTML = "";
-        days.forEach(week => {
-            calendarHTML += "<tr>";
-            week.forEach(day => {
-                calendarHTML += `<td style="font-size: 12px;">${day || ""}</td>`;
+        // Események betöltése
+        $.get(`/api/events/${year}/${month}`, function(events) {
+            events.forEach(event => {
+                let eventDay = new Date(event.event_date).getDate();
+                $(`#day-${eventDay}`).append('<div class="event-marker"></div>');
             });
-            calendarHTML += "</tr>";
         });
-
-        document.getElementById("calendar-body").innerHTML = calendarHTML;
     }
 
     function prevMonth() {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
+        if (currentMonth === 1) {
+            currentMonth = 12;
+            currentYear--;
+        } else {
+            currentMonth--;
+        }
+        loadCalendar(currentYear, currentMonth);
     }
 
-    document.addEventListener("DOMContentLoaded", renderCalendar);
+    function nextMonth() {
+        if (currentMonth === 12) {
+            currentMonth = 1;
+            currentYear++;
+        } else {
+            currentMonth++;
+        }
+        loadCalendar(currentYear, currentMonth);
+    }
+
+    $(document).ready(() => {
+        loadCalendar(currentYear, currentMonth);
+    });
 </script>

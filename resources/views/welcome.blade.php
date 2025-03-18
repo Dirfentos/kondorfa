@@ -24,8 +24,11 @@
 
     <div class="container p-3" style="background-color:white; color: black; font-size: 24px; text-align: center;">
         
-      <div> @include('includes.weather', ['weatherData' => $weatherData ?? null, 'error' => $error ?? null])</div>
+      <div> 
+        
+        @include('includes.weather', ['weatherData' => $weatherData ?? null, 'error' => $error ?? null])</div>
 
+        @include('includes.calendar')
      
 
 

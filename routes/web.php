@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\EventController;
+
+Route::get('/events/{year}/{month}', [EventController::class, 'getEventsByMonth']);
 
 Route::get('/', function () {
     return view('welcome');
