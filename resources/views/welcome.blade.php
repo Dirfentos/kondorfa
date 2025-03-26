@@ -29,7 +29,8 @@
         @include('includes.weather', ['weatherData' => $weatherData ?? null, 'error' => $error ?? null])</div>
 
         @include('includes.calendar')
-     
+        <div id="event-details" style="margin-top: 20px; text-align: center;"></div>
+
 
 
         <hr>
