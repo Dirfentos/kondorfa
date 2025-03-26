@@ -51,10 +51,11 @@
 }
 
 .has-event {
-    background: linear-gradient(to bottom, #cce5ff 10%, white 10%);
+    background-color: #cce5ff; /* világoskék */
     border: 1px solid #007bff;
     position: relative;
 }
+
 
 .has-event::after {
     content: '';
@@ -73,6 +74,20 @@
 #event-details li {
     margin-bottom: 10px;
 }
+
+.event-meeting {
+    background-color: #cce5ff; /* kék */
+}
+.event-sport {
+    background-color: #d4edda; /* zöld */
+}
+.event-holiday {
+    background-color: #f8d7da; /* piros */
+}
+.event-default {
+    background-color: #f1f1f1; /* szürke */
+}
+
 
 </style>
 <div class="calendar-wrapped">
@@ -122,32 +137,32 @@ weekDays.forEach(day => {
         }
 
         // Események betöltése
-        $.get(`/api/events/${year}/${month}`, function(events) {
+        $.get(`/events/${year}/${month}`, function(events) {
     events.forEach(event => {
-        let eventDay = new Date(event.event_date).getDate();
-        $(`#day-${eventDay}`).addClass('has-event');
+        const eventDay = new Date(event.event_date).getDate();
+        const typeClass = `event-${event.type || 'default'}`;
+        $(`#day-${eventDay}`).addClass(typeClass);
     });
 });
+
 
 $(".day").off("click").on("click", function () {
     const selectedDay = $(this).data("day");
     const formattedDay = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`;
 
-    $.get(`/api/events/${currentYear}/${currentMonth}`, function(events) {
+    $.get(`/events/${currentYear}/${currentMonth}`, function(events) {
         const dayEvents = events.filter(event => event.event_date === formattedDay);
 
         if (dayEvents.length > 0) {
-            let html = `<h4>${formattedDay} eseményei:</h4><ul>`;
+            let msg = `${formattedDay} eseményei:\n\n`;
             dayEvents.forEach(ev => {
-                html += `<li><strong>${ev.title}</strong><br><small>${ev.description || ''}</small></li>`;
+                msg += `• ${ev.title}\n${ev.description ? ev.description + '\n' : ''}\n`;
             });
-            html += `</ul>`;
-            $("#event-details").html(html);
-        } else {
-            $("#event-details").html(`<p>${formattedDay}-re nincs esemény.</p>`);
-        }
+            alert(msg);
+        } 
     });
 });
+
 
 
     }
