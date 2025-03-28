@@ -16,7 +16,7 @@
         <div class="container mb-5 mt-4">
             <div class="row">
               <!-- Kártya 1 -->
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card" style="width: 18rem;">
                   <img src="images/56-os.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
                   <div class="card-body">
@@ -26,7 +26,7 @@
               </div>
               
               <!-- Kártya 2 -->
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card" style="width: 18rem;">
                   <img src="images/1.vh-s.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
                   <div class="card-body">
@@ -36,7 +36,7 @@
               </div>
               
               <!-- Kártya 3 -->
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-lg-4 mb-4 mx-auto">
                 <div class="card" style="width: 18rem;">
                   <img src="images/ferfifej2.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
                   <div class="card-body">
@@ -50,7 +50,7 @@
           <div class="container mb-5 mt-4">
             <div class="row">
               <!-- Kártya 1 -->
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card" style="width: 18rem;">
                   <img src="images/kereszt1.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="">
                   <div class="card-body">
@@ -60,7 +60,7 @@
               </div>
               
               <!-- Kártya 2 -->
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card" style="width: 18rem;">
                   <img src="images/templom.jfif" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="...">
                   <div class="card-body">
@@ -70,7 +70,7 @@
               </div>
               
               <!-- Kártya 3 -->
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-lg-4 mb-4 mx-auto">
                 <div class="card" style="width: 18rem;">
                   <img src="images/boleny1.jpg" class="card-img-top" style="width: 100%; height: 300px; object-fit: cover;" alt="...">
                   <div class="card-body">

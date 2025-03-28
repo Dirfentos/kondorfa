@@ -16,7 +16,7 @@
         <h1 style="text-align: center">Kondorfa története</h1> <br>
 
 <p>
-    <img src="images/cimer.png" class="img-fluid float-start me-3" width="200px" height="auto" alt="Címer">
+    <img src="images/cimer.png" class="img-fluid float-start me-3 responsive-img img-fluid" width="200px" height="auto" alt="Címer">
     Kondorfa község Vas vármegyében, az Őrség peremén, a Lugos-patak völgyében helyezkedik el, erdőkkel körülvéve.
     Első írásos említése 1350-ből származik, amikor Gardunfolua néven szerepelt. Neve eredetileg a német "Krottendorf"
     helynévből származik, mai alakja magyarosított forma.

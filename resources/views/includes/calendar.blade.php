@@ -265,8 +265,8 @@
 }
 
 .day-list {
-    display: none;
     list-style: none;
+    background-color: #f2f2f2;
     padding: 0;
     margin: 0;
 }
@@ -284,6 +284,7 @@
     border-left: 4px solid #007bff;
     font-weight: bold;
 }
+
 
 
 
@@ -342,27 +343,29 @@
 
     // Események betöltése
     $.get(`/events/${year}/${month}`, function(events) {
-        events.forEach(event => {
-            const eventDay = new Date(event.event_date).getDate();
-            const typeClass = `event-${event.type || 'default'}`;
-            $(`#day-${eventDay}`).addClass(typeClass);
-        });
-
-            // Naplista nézet feltöltése kis kijelzőkhöz
-const dayList = $("#day-list");
-dayList.empty();
-
-for (let day = 1; day <= daysInMonth; day++) {
-    const id = `day-${day}`;
-    const cell = $(`#${id}`);
-    const hasEvent = cell.hasClass("event-default") || cell.hasClass("event-meeting") || cell.hasClass("event-sport") || cell.hasClass("event-holiday");
-
-    const listItem = $(`<li class="${hasEvent ? 'has-event' : ''}"><span>${day}. nap</span>${hasEvent ? '<span>📌</span>' : ''}</li>`);
-    dayList.append(listItem);
-}
+    events.forEach(event => {
+        const eventDay = new Date(event.event_date).getDate();
+        const typeClass = `event-${event.type || 'default'}`;
+        $(`#day-${eventDay}`).addClass(typeClass);
     });
 
-    // Napra kattintás
+    // Naplista nézet feltöltése kis kijelzőkhöz
+    const dayList = $("#day-list");
+    dayList.empty();
+
+    for (let day = 1; day <= daysInMonth; day++) {
+        const id = `day-${day}`;
+        const cell = $(`#${id}`);
+        const hasEvent = cell.hasClass("event-default") || cell.hasClass("event-meeting") || cell.hasClass("event-sport") || cell.hasClass("event-holiday");
+
+        const listItem = $(`<li class="${hasEvent ? 'has-event' : ''}" data-day="${day}">
+                                <span>${day}. nap</span>
+                                ${hasEvent ? '<span>📌</span>' : ''}
+                            </li>`);
+        dayList.append(listItem);
+    }
+
+    // Napra kattintás (rácsos nézet)
     $(".day").off("click").on("click", function () {
         const selectedDay = $(this).data("day");
         const formattedDay = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`;
@@ -376,9 +379,42 @@ for (let day = 1; day <= daysInMonth; day++) {
                     msg += `• ${ev.title}\n${ev.description ? ev.description + '\n' : ''}\n`;
                 });
                 alert(msg);
-            } 
+            }
         });
     });
+
+    // Naplista kattintás (mobilnézet)
+    $(".day-list li").off("click").on("click", function () {
+        const selectedDay = $(this).data("day");
+        const formattedDay = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`;
+
+        $.get(`/events/${currentYear}/${currentMonth}`, function(events) {
+            const dayEvents = events.filter(event => event.event_date === formattedDay);
+
+            if (dayEvents.length > 0) {
+                let msg = `${formattedDay} eseményei:\n\n`;
+                dayEvents.forEach(ev => {
+                    msg += `• ${ev.title}\n${ev.description ? ev.description + '\n' : ''}\n`;
+                });
+                alert(msg);
+            } else {
+                alert(`${formattedDay}-re nincs esemény.`);
+            }
+        });
+    });
+});
+
+
+
+// ⛔ Ha visszaváltunk nagy nézetre, rejtse el a naplistát
+if (window.innerWidth > 390) {
+    $("#day-list").hide();       // elrejti
+} else {
+    $("#day-list").show();       // újra megjeleníti kis nézetben
+}
+
+
+
 }  
 
     function prevMonth() {

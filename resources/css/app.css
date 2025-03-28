@@ -126,3 +126,18 @@ body {
     }
 }
 
+/* HElytörténet */
+
+@media (max-width: 768px) {
+    .responsive-img {
+      max-width: 100px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 488px) {
+    .responsive-img {
+      max-width: 75px;
+      height: auto;
+    }
+  }

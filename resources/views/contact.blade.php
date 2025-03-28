@@ -30,7 +30,7 @@
                   <div class="col-md-4">
                       <input type="text" name="first_name" class="form-control" placeholder="Keresztnév" aria-label="First name">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4 mt-3 mt-md-0">
                       <input type="text" name="last_name" class="form-control" placeholder="Vezetéknév" aria-label="Last name">
                   </div>
               </div>
