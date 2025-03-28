@@ -9,14 +9,14 @@
     
     <title>@yield('title')</title>
 </head>
-<body style="background-color: #b3d9ff; font-family: 'DM Serif Text', serif; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+<body class="d-flex flex-column min-vh-100" style="background-color: #b3d9ff; font-family: 'DM Serif Text', serif; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @include('includes.nav')
     
-    
+    <main class="flex-fill">
      @yield('content')
-    
+    </main>
 
 
     @include('includes.footer')

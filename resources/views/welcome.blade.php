@@ -44,7 +44,7 @@
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <img src="images/news/03.11.jpg" alt="" srcset="">
+                <img src="images/news/03.11.jpg" class="img-fluid" alt="" srcset="">
 
                 <footer class="blockquote-footer d-flex align-items-center">
                     Közzétéve: 2025. március 11.
@@ -69,7 +69,7 @@
                   🌹Nőnap alkalmából szeretettel köszöntjük a Hölgyeket, Lànyokat és Asszonyokat! 💐 <br>
                   Kondorfa Község Önkormányzata <br></p>
 
-                  <img src="images/news/03.08.jpg" alt="" srcset="">
+                  <img src="images/news/03.08.jpg" class="img-fluid" alt="" srcset="">
 
                   <footer class="blockquote-footer d-flex align-items-center">
                     Közzétéve: 2025. március 8.

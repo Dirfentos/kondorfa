@@ -10,10 +10,6 @@ body {
     flex: 1; 
 }
 
-footer {          
-    height: 100px;
-}
-
 .position-relative {
     position: relative;
 }
@@ -38,18 +34,6 @@ footer {
     opacity: 0;
 }
 
-.weather-container {
-    position: relative;
-    width: 300px;
-    margin-left: auto; /* Jobbra tolja az elemet */
-    margin-right: 0;
-    margin-top: 20px; /* Távolság a tartalomtól */
-    display: flex;
-    justify-content: flex-start; /* Balra igazítja a háttér div-et */
-}
-
-
-
 .weather-content {
     position: relative;
     z-index: 1;
@@ -58,5 +42,87 @@ footer {
     border-radius: 10px;
     text-align: left;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-container {
+    display: flex;
+    flex-wrap: nowrap; /* alapból egysoros */
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.weather-box {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.weather-box:last-child {
+    border-right: none;
+}
+
+.weather-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.weather-value {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/*Időjárás jelentés*/
+
+/* Alap nézet – minden egy sorban */
+.forecast-row,
+.sun-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Mobil nézet – minden egymás alatt */
+@media (max-width: 767px) {
+    .forecast-row,
+    .sun-row {
+        flex-wrap: wrap;
+    }
+
+    .forecast-box,
+    .sun-box {
+        flex: 1 1 100%;
+    }
+}
+
+/* 768px–1199px – két soros elrendezés */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .forecast-row {
+        flex-wrap: wrap;
+    }
+
+    .forecast-box {
+        flex: 1 1 33.33%;
+    }
+
+    .sun-row {
+        flex-wrap: wrap;
+    }
+
+    .sun-box {
+        flex: 1 1 50%;
+    }
 }
 

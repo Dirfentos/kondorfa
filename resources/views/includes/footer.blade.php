@@ -1,29 +1,30 @@
-<footer class="text-black py-4  d-flex align-items-center" style="height: 100px; background-color: #003366; color: white;">
-    <div class="container ">
-        <div class="row">
-            <div class="col-md-6 mt-2" style="width: 200px;">
-                <h6 class="m-1" style="color: white;">Elérhetőségek:</h6>
-
-                <ul>
-                    <li style="font-size:12px; color: white;">9943, Kondorfa Alvég u. 1.</li>
-                    <li style="font-size:12px; color: white;">+3694428103</li>
-                    <li style="font-size:12px; color: white;">hivatal@kondorfa.hu</li>
-                </ul>                
+<footer class="text-white " style="background-color: #003366;">
+    <div class="container py-2">
+        <div class="row align-items-center text-center text-md-start">
+            <!-- Bal oldal -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h6 class="mb-2">Elérhetőségek:</h6>
+                <ul class="list-unstyled mb-0" style="font-size: 12px;">
+                    <li>9943, Kondorfa Alvég u. 1.</li>
+                    <li>+36 94 428 103</li>
+                    <li>hivatal@kondorfa.hu</li>
+                </ul>
             </div>
 
-            <div class="col-md-6 text-md-end mt-3" style="width: 200px;">
-                <button type="button" class="btn btn-primary">Kapcsolatfelvétel</button>
+            <!-- Közép -->
+            <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+                <a href="{{ route('contact') }}" class="btn btn-primary">Kapcsolatfelvétel</a>
             </div>
 
-            <div class="col-md-6 text-md-end mt-2" style="width: 200px;">
-                <h6 class="text-white">Kövess minket</h6>
+            <!-- Jobb oldal -->
+            <div class="col-md-4 text-md-end">
+                <h6 class="mb-2">Kövess minket</h6>
                 <a href="https://www.facebook.com/profile.php?id=100070319796824"
-                   class="text-white me-3 text-decoration-none"
+                   class="text-white text-decoration-none"
                    target="_blank">
                     <i class="fab fa-facebook-f me-1"></i> Facebook
                 </a>
             </div>
-            
         </div>
     </div>
 </footer>

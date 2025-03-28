@@ -1,26 +1,31 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
-    #calendar {
-        width: 800px;
-        height: 450px;
-        background-color: #f8f9fa;
-        border: 2px solid #007bff;
-        border-radius: 10px;
-        padding: 10px;
-        text-align: center;
-    }
-    .calendar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: bold;
-    }
-    .calendar-grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 2px;
-        margin-top: 10px;
-    }
+#calendar {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#calendar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
     .day {
         padding: 5px;
         border: 1px solid #ccc;
@@ -37,11 +42,12 @@
         right: 2px;
     }
 
-    .calendar-wrapper {
+    .calendar-wrapped {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
 }
 
 .day-name {
@@ -49,6 +55,16 @@
     font-weight: bold;
     background-color: #e5e5e5;
     border-bottom: 1px solid #ccc;
+}
+
+.calendar-grid .day-name {
+    background-color: #e9f3ff;
+    font-weight: bold;
+}
+
+.calendar-grid .has-event {
+    background: linear-gradient(to bottom, #cce5ff 20%, white 20%);
+    border: 2px solid #007bff;
 }
 
 .has-event {
@@ -66,6 +82,11 @@
     height: 5px;
     width: 100%;
     background-color: #007bff;
+    transition: background-color 0.3s;
+}
+
+.has-event:hover::after {
+    background-color: #0056b3;
 }
 
 #event-details ul {
@@ -89,6 +110,183 @@
     background-color: #cce5ff; /* kék */
 }
 
+@media (max-width: 768px) {
+    #calendar-title {
+        font-size: 1.2rem;
+    }
+
+    .calendar-grid .day,
+    .calendar-grid .day-name {
+        padding: 6px;
+        font-size: 12px;
+        min-width: 40px; /* ➕ ne nyomódjon össze túlságosan */
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .calendar-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-grid .day,
+    .calendar-grid .day-name {
+        font-size: 10px;
+        padding: 4px;
+        min-height: 36px;
+    }
+
+    #calendar-title {
+        font-size: 1.1rem;
+    }
+
+    .calendar-header .btn {
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .calendar-grid {
+        grid-template-columns: repeat(7, minmax(0, 1fr)); /* oszlopok zsugorodhatnak */
+    }
+
+    .calendar-grid .day,
+    .calendar-grid .day-name {
+        font-size: 13px;
+        padding: 6px;
+        min-width: 30px;
+    }
+
+    #calendar-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 458px) {
+    .calendar-grid {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    .calendar-grid .day,
+    .calendar-grid .day-name {
+        font-size: 9px;
+        padding: 3px;
+        min-height: 28px;
+        line-height: 1.1;
+    }
+
+    #calendar-title {
+        font-size: 1rem;
+    }
+
+    .calendar-header .btn {
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+
+    .has-event::after {
+        height: 4px;
+    }
+}
+
+@media (max-width: 420px) {
+    .calendar-grid {
+        grid-template-columns: repeat(7, auto); /* minden oszlop a tartalomhoz igazodik */
+        justify-content: center; /* középre igazítja a rácsot */
+        gap: 2px;
+    }
+
+    .calendar-grid .day,
+    .calendar-grid .day-name {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+        padding: 0;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .has-event::after {
+        height: 3px;
+    }
+
+    #calendar-title {
+        font-size: 1rem;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 404px) {
+    .calendar-grid {
+        grid-template-columns: repeat(7, auto);
+        justify-content: center;
+        gap: 1.5px;
+    }
+
+    .calendar-grid .day,
+    .calendar-grid .day-name {
+        width: 24px;
+        height: 24px;
+        font-size: 9px;
+        padding: 0;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .has-event::after {
+        height: 2px;
+    }
+
+    #calendar-title {
+        font-size: 0.95rem;
+    }
+
+    .calendar-header .btn {
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+}
+
+@media (max-width: 390px) {
+    .calendar-grid {
+        display: none;
+    }
+
+    .day-list {
+        display: block;
+    }
+}
+
+.day-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.day-list li {
+    padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.day-list li.has-event {
+    background-color: #e6f2ff;
+    border-left: 4px solid #007bff;
+    font-weight: bold;
+}
+
+
+
 
 </style>
 <div class="calendar-wrapped">
@@ -99,6 +297,8 @@
         <button class="btn" onclick="nextMonth()">➡</button>
     </div>
     <div class="calendar-grid" id="calendar-grid"></div>
+    <ul class="day-list" id="day-list"></ul>
+
 </div>
 </div>
 
@@ -107,66 +307,79 @@
     let currentMonth = new Date().getMonth() + 1;
 
     function loadCalendar(year, month) {
-        const monthNames = [
-    "január", "február", "március", "április", "május", "június",
-    "július", "augusztus", "szeptember", "október", "november", "december"
-];
-$("#calendar-title").text(`${year}. ${monthNames[month - 1]}`);
+    const monthNames = [
+        "január", "február", "március", "április", "május", "június",
+        "július", "augusztus", "szeptember", "október", "november", "december"
+    ];
+    $("#calendar-title").text(`${year}. ${monthNames[month - 1]}`);
 
+    const isMobile = window.innerWidth <= 768;
 
-        let daysInMonth = new Date(year, month, 0).getDate();
-        let firstDay = new Date(year, month - 1, 1).getDay();
+    const weekDays = isMobile
+        ? ["H", "K", "Sz", "Cs", "P", "Sz", "V"]
+        : ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"];
 
-        let calendarGrid = $("#calendar-grid");
-        calendarGrid.empty();
+    let daysInMonth = new Date(year, month, 0).getDate();
+    let firstDay = new Date(year, month - 1, 1).getDay();
 
-        const weekDays = ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"]; // magyar rövidítések
-weekDays.forEach(day => {
-    calendarGrid.append(`<div class="day-name"><strong>${day}</strong></div>`);
-});
+    const calendarGrid = $("#calendar-grid");
+    calendarGrid.empty();
 
-
-        // Üres helyek a hónap első napja előtt
-        for (let i = 0; i < firstDay; i++) {
-            calendarGrid.append('<div class="day"></div>');
-        }
-
-        // Napok generálása
-        for (let day = 1; day <= daysInMonth; day++) {
-            calendarGrid.append(`<div class="day" id="day-${day}" data-day="${day}">${day}</div>`);
-
-        }
-
-        // Események betöltése
-        $.get(`/events/${year}/${month}`, function(events) {
-    events.forEach(event => {
-        const eventDay = new Date(event.event_date).getDate();
-        const typeClass = `event-${event.type || 'default'}`;
-        $(`#day-${eventDay}`).addClass(typeClass);
+    // Napok nevei
+    weekDays.forEach(day => {
+        calendarGrid.append(`<div class="day-name"><strong>${day}</strong></div>`);
     });
-});
 
-
-$(".day").off("click").on("click", function () {
-    const selectedDay = $(this).data("day");
-    const formattedDay = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`;
-
-    $.get(`/events/${currentYear}/${currentMonth}`, function(events) {
-        const dayEvents = events.filter(event => event.event_date === formattedDay);
-
-        if (dayEvents.length > 0) {
-            let msg = `${formattedDay} eseményei:\n\n`;
-            dayEvents.forEach(ev => {
-                msg += `• ${ev.title}\n${ev.description ? ev.description + '\n' : ''}\n`;
-            });
-            alert(msg);
-        } 
-    });
-});
-
-
-
+    // Üres napok a hónap elején
+    for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
+        calendarGrid.append('<div class="day"></div>');
     }
+
+    // Napok generálása
+    for (let day = 1; day <= daysInMonth; day++) {
+        calendarGrid.append(`<div class="day" id="day-${day}" data-day="${day}">${day}</div>`);
+    }
+
+    // Események betöltése
+    $.get(`/events/${year}/${month}`, function(events) {
+        events.forEach(event => {
+            const eventDay = new Date(event.event_date).getDate();
+            const typeClass = `event-${event.type || 'default'}`;
+            $(`#day-${eventDay}`).addClass(typeClass);
+        });
+
+            // Naplista nézet feltöltése kis kijelzőkhöz
+const dayList = $("#day-list");
+dayList.empty();
+
+for (let day = 1; day <= daysInMonth; day++) {
+    const id = `day-${day}`;
+    const cell = $(`#${id}`);
+    const hasEvent = cell.hasClass("event-default") || cell.hasClass("event-meeting") || cell.hasClass("event-sport") || cell.hasClass("event-holiday");
+
+    const listItem = $(`<li class="${hasEvent ? 'has-event' : ''}"><span>${day}. nap</span>${hasEvent ? '<span>📌</span>' : ''}</li>`);
+    dayList.append(listItem);
+}
+    });
+
+    // Napra kattintás
+    $(".day").off("click").on("click", function () {
+        const selectedDay = $(this).data("day");
+        const formattedDay = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`;
+
+        $.get(`/events/${currentYear}/${currentMonth}`, function(events) {
+            const dayEvents = events.filter(event => event.event_date === formattedDay);
+
+            if (dayEvents.length > 0) {
+                let msg = `${formattedDay} eseményei:\n\n`;
+                dayEvents.forEach(ev => {
+                    msg += `• ${ev.title}\n${ev.description ? ev.description + '\n' : ''}\n`;
+                });
+                alert(msg);
+            } 
+        });
+    });
+}  
 
     function prevMonth() {
         if (currentMonth === 1) {
@@ -191,4 +404,9 @@ $(".day").off("click").on("click", function () {
     $(document).ready(() => {
         loadCalendar(currentYear, currentMonth);
     });
+
+    window.addEventListener('resize', () => {
+    loadCalendar(currentYear, currentMonth);
+});
+
 </script>
