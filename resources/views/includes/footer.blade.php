@@ -1,7 +1,7 @@
 <footer class="text-black py-4  d-flex align-items-center" style="height: 100px; background-color: #003366; color: white;">
     <div class="container ">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 mt-2" style="width: 200px;">
                 <h6 class="m-1" style="color: white;">Elérhetőségek:</h6>
 
                 <ul>
@@ -11,7 +11,11 @@
                 </ul>                
             </div>
 
-            <div class="col-md-6 text-md-end">
+            <div class="col-md-6 text-md-end mt-3" style="width: 200px;">
+                <button type="button" class="btn btn-primary">Kapcsolatfelvétel</button>
+            </div>
+
+            <div class="col-md-6 text-md-end mt-2" style="width: 200px;">
                 <h6 class="text-white">Kövess minket</h6>
                 <a href="https://www.facebook.com/profile.php?id=100070319796824"
                    class="text-white me-3 text-decoration-none"

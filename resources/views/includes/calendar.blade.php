@@ -2,9 +2,10 @@
 <style>
     #calendar {
         width: 800px;
-        height: 400px;
-        background-color: white;
-        border: 1px solid #ddd;
+        height: 450px;
+        background-color: #f8f9fa;
+        border: 2px solid #007bff;
+        border-radius: 10px;
         padding: 10px;
         text-align: center;
     }
@@ -46,7 +47,7 @@
 .day-name {
     padding: 5px;
     font-weight: bold;
-    background-color: #f0f0f0;
+    background-color: #e5e5e5;
     border-bottom: 1px solid #ccc;
 }
 
@@ -76,7 +77,7 @@
 }
 
 .event-meeting {
-    background-color: #cce5ff; /* kék */
+    background-color: #f1f1f1; /* szürke */ 
 }
 .event-sport {
     background-color: #d4edda; /* zöld */
@@ -85,17 +86,17 @@
     background-color: #f8d7da; /* piros */
 }
 .event-default {
-    background-color: #f1f1f1; /* szürke */
+    background-color: #cce5ff; /* kék */
 }
 
 
 </style>
 <div class="calendar-wrapped">
-<div id="calendar ">
+<div id="calendar">
     <div class="calendar-header">
-        <button onclick="prevMonth()">⬅</button>
+        <button class="btn" onclick="prevMonth()">⬅</button>
         <span id="calendar-title"></span>
-        <button onclick="nextMonth()">➡</button>
+        <button class="btn" onclick="nextMonth()">➡</button>
     </div>
     <div class="calendar-grid" id="calendar-grid"></div>
 </div>

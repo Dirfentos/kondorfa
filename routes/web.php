@@ -46,5 +46,11 @@ Route::get('/programs', function () {
     return view('programs');
 })->name('programs');
 
+// routes/web.php
+Route::get('/kapcsolat', function () {
+    return view('contact');
+})->name('contact');
+
+
 
 
