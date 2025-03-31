@@ -2,7 +2,7 @@
 <style>
 #calendar {
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     background: #fff;
     border-radius: 10px;
     border: 2px solid #007bff;

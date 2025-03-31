@@ -46,7 +46,7 @@
               <blockquote class="blockquote mb-0">
                 <img src="images/news/03.11.jpg" class="img-fluid" alt="" srcset="">
 
-                <footer class="blockquote-footer d-flex align-items-center">
+                <footer class="blockquote-footer d-flex align-items-center  mt-2">
                     Közzétéve: 2025. március 11.
                   </footer>
               </blockquote>
@@ -71,7 +71,7 @@
 
                   <img src="images/news/03.08.jpg" class="img-fluid" alt="" srcset="">
 
-                  <footer class="blockquote-footer d-flex align-items-center">
+                  <footer class="blockquote-footer d-flex align-items-center  mt-2">
                     Közzétéve: 2025. március 8.
                   </footer>
               </blockquote>

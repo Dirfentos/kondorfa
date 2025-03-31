@@ -21,9 +21,9 @@
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <img src="images/news/03.16.jpg" alt="" srcset="">
+                <img src="images/news/03.16.jpg" class="img-fluid" alt="" srcset="">
 
-                <footer class="blockquote-footer d-flex align-items-center">
+                <footer class="blockquote-footer d-flex align-items-center mt-2">
                   Közzétéve: 2025. március 16.
                 </footer>
               </blockquote>
@@ -42,9 +42,9 @@
                   Mindenkit Szeretettel Várunk!
                 </p>
 
-                  <img src="images/news/01.21.jpg" alt="" srcset=""> <br>
+                  <img src="images/news/01.21.jpg" class="img-fluid" alt="" srcset=""> <br>
 
-                  <footer class="blockquote-footer d-flex align-items-center">
+                  <footer class="blockquote-footer d-flex align-items-center  mt-2">
                     Közzétéve: 2025. január 21.
                   </footer>
               </blockquote>

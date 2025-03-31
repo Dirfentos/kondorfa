@@ -34,6 +34,8 @@ body {
     opacity: 0;
 }
 
+/*Időjárás jelentés*/
+
 .weather-content {
     position: relative;
     z-index: 1;
@@ -60,8 +62,6 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .weather-box {
     flex: 1 1 200px;
     text-align: center;
@@ -85,7 +85,7 @@ body {
     font-weight: normal;
 }
 
-/*Időjárás jelentés*/
+
 
 /* Alap nézet – minden egy sorban */
 .forecast-row,
@@ -127,17 +127,29 @@ body {
 }
 
 /* HElytörténet */
+/* Asztali nézet (alap): nincs korlátozva */
 
-@media (max-width: 768px) {
+/* Tablet méret alatt */
+@media (max-width: 992px) {
     .responsive-img {
-      max-width: 100px;
+      max-width: 120px;
       height: auto;
     }
   }
-
-  @media (max-width: 488px) {
+  
+  /* Mobil */
+  @media (max-width: 768px) {
     .responsive-img {
-      max-width: 75px;
+      max-width: 90px;
       height: auto;
     }
   }
+  
+  /* Nagyon kis kijelző */
+  @media (max-width: 480px) {
+    .responsive-img {
+      max-width: 60px;
+      height: auto;
+    }
+  }
+  
