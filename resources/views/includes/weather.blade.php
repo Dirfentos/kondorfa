@@ -1,10 +1,3 @@
-<div class="text-center my-4">
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#idojarasCollapse" aria-expanded="false" aria-controls="idojarasCollapse">
-      Időjárás előrejelzés megnyitása
-    </button>
-  </div>
-  
-
 <div class="collapse" id="idojarasCollapse">
 <div class="container">
     <div class="row justify-content-center">
