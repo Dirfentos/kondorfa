@@ -11,14 +11,14 @@
 
     <div class="container p-3" style="background-color:white; color: black; font-size: 24px;">
 
-        <h1 style="text-align: center">Keresztek településünkben</h1>
-
         <a href="{{ route('gallery') }}" class="btn btn-outline-primary">Vissza</a>
+
+        <h1 style="text-align: center">Keresztek településünkben</h1>
 
         <div class="container py-5">
             <div class="row">
                 @foreach ($imageFiles as $index => $image)
-                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4 d-flex justify-content-center">
                         <div class="card" style="width: 18rem;">
                             <img src="{{ asset('images/kereszt/' . basename($image)) }}" 
                                  class="card-img-top modal-image" 

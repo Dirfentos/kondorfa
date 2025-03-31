@@ -26,6 +26,8 @@
         
       <div> 
         
+
+
         @include('includes.weather', ['weatherData' => $weatherData ?? null, 'error' => $error ?? null])</div>
         <div class="d-flex justify-content-center mt-5">
         @include('includes.calendar')

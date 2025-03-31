@@ -15,6 +15,7 @@
             <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
                 <a href="{{ route('contact') }}" class="btn btn-primary">Kapcsolatfelvétel</a>
             </div>
+            
 
             <!-- Jobb oldal -->
             <div class="col-md-4 text-md-end">
@@ -24,6 +25,8 @@
                    target="_blank">
                     <i class="fab fa-facebook-f me-1"></i> Facebook
                 </a>
+
+                <p>creadted by Alexander Takács © 2025.</p>
             </div>
         </div>
     </div>
