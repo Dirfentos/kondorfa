@@ -35,8 +35,10 @@ body {
 }
 
 #text-overlay {
-    font-size: 72px;
+    font-size: clamp(28px, 6vw, 76px);
 }
+
+
 /*Időjárás jelentés*/
 
 .weather-content {
@@ -158,32 +160,19 @@ body {
   
 
 /* Kezdőoldal */
-@media (max-width: 992px) {
-    #text-overlay {
-        font-size :50px !important;
-    }
-}
-
-
-@media (max-width: 647px) {
-    #text-overlay {
-        font-size: 40px !important;
-    }
-}
-
 .hero-box {
     height: 300px;
 }
 
 @media (max-width: 992px) {
     .hero-box {
-        height: 250px;
+        height: 200px;
     }
 }
 
 @media (max-width: 767px) {
     .hero-box {
-        height: 200px;
+        height: 150px;
     }
 }
 

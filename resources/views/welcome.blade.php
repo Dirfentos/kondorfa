@@ -60,7 +60,7 @@
 
         <hr>
 
-        <h1>Aktuális hírek</h1>
+        <h1>Aktuális híreink</h1>
         
         <div class="card my-4">
             <div class="card-header">
