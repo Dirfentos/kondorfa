@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/events/{year}/{month}', [EventController::class, 'getEventsByMonth']);
 
@@ -51,6 +52,9 @@ Route::get('/kapcsolat', function () {
     return view('contact');
 })->name('contact');
 
+
+
+Route::post('/contact', [ContactController::class, 'contact'])->name('contact.send');
 
 
 

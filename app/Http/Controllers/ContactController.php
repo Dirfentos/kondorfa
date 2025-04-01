@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
 
-
-class UserController extends Controller
+class ContactController extends Controller
 {
     public function contact(Request $request) {
     $validated = $request->validate([
@@ -20,5 +19,5 @@ class UserController extends Controller
 
     Mail::to('alex.goofymoments@gmail.com')->send(new ContactMail($validated));
     return back()->with('success', 'Email elküldve!');
-}
+}   
 }
