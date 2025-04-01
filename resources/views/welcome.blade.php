@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+
 <div class="container-fluid p-0">
     <div class="position-relative w-100 hero-box" style="overflow: hidden;">
         <div class="position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.5); top: 0; left: 0;" id="overlay"></div>
