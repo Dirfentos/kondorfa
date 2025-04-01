@@ -1,11 +1,19 @@
 <x-mail::message>
-# Introduction
+# Kapcsolatfelvétel
 
-The body of your message.
+Kedves Admin!
 
-<x-mail::button :url="''">
+{{now()}} -kor, az alábbi {{Request::ip()}} IP címről megkeresés érkezett:
+
+<b>Küldő adatai:</b>
+- Vezettéknév: {{$last_name}}
+- Keresztnév: {{$first_name}}
+- email: {{$email}}
+- üzenet: <i>"{{$message}}"</i>
+
+{{-- <x-mail::button :url="''">
 Button Text
-</x-mail::button>
+</x-mail::button> --}}
 
 Thanks,<br>
 {{ config('app.name') }}
