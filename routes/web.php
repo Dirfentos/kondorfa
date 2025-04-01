@@ -54,7 +54,7 @@ Route::get('/kapcsolat', function () {
 
 
 
-Route::post('/contact', [ContactController::class, 'contact'])->name('contact.send');
+Route::post('/kapcsolat', [ContactController::class, 'contact'])->name('contact.send');
 
 
 

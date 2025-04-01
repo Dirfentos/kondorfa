@@ -23,7 +23,7 @@
         </div>
 
         <!-- Űrlap -->
-        <form action="" method="post" class="mt-5">
+        <form action="{{ route('contact.send') }}" method="POST" class="mt-5">
           @csrf
           <div class="container">
               <div class="row justify-content-center mb-3">
