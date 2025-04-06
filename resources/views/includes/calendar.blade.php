@@ -290,7 +290,7 @@
 
 
 </style>
-<div class="collapse mt-3" id="naptarCollapse">
+<div class="collapse-box mt-3" id="naptarCollapse">
 <div class="calendar-wrapped">
 <div id="calendar">
     <div class="calendar-header">

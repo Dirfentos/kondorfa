@@ -71,15 +71,12 @@ body {
 }
 
 
-
-/* Alap nézet – minden egy sorban */
 .forecast-row,
 .sun-row {
     display: flex;
     flex-wrap: nowrap;
 }
 
-/* Mobil nézet – minden egymás alatt */
 @media (max-width: 767px) {
     .forecast-row,
     .sun-row {
@@ -92,7 +89,6 @@ body {
     }
 }
 
-/* 768px–1199px – két soros elrendezés */
 @media (min-width: 768px) and (max-width: 1199px) {
     .forecast-row {
         flex-wrap: wrap;
@@ -111,18 +107,15 @@ body {
     }
 }
 
-/* HElytörténet */
-/* Asztali nézet (alap): nincs korlátozva */
+/* Helytörténet */
 
-/* Tablet méret alatt */
 @media (max-width: 992px) {
     .responsive-img {
       max-width: 120px;
       height: auto;
     }
   }
-  
-  /* Mobil */
+
   @media (max-width: 768px) {
     .responsive-img {
       max-width: 90px;
@@ -130,7 +123,6 @@ body {
     }
   }
   
-  /* Nagyon kis kijelző */
   @media (max-width: 480px) {
     .responsive-img {
       max-width: 60px;
@@ -138,8 +130,6 @@ body {
     }
   }
   
-
-/* Kezdőoldal */
 .position-relative {
     position: relative;
 }
@@ -196,7 +186,17 @@ body {
       font-size: 40px !important;
     }
   }
-  
+
+  .collapse-box {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.collapse-box.show {
+  max-height: 1000px; /* elég nagy, hogy megmutassa a tartalmat */
+}
+
 
 </style>
 

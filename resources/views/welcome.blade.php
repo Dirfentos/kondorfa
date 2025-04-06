@@ -28,36 +28,16 @@
       <div> 
         
         <div class="d-flex justify-content-center gap-3 my-4">
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="collapse"
-            data-bs-target="#idojarasCollapse"
-            aria-expanded="false"
-            aria-controls="idojarasCollapse"
-          >
-            Időjárás
-          </button>
-        
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="collapse"
-            data-bs-target="#naptarCollapse"
-            aria-expanded="false"
-            aria-controls="naptarCollapse"
-          >
-            Naptár
-          </button>
+          <button class="btn btn-primary" id="toggleWeatherBtn">Időjárás</button>
+          <button class="btn btn-primary" id="toggleCalendarBtn">Naptár</button>
         </div>
+        
         
         @include('includes.weather', ['weatherData' => $weatherData ?? null, 'error' => $error ?? null])</div>
         <div class="d-flex justify-content-center mt-5">
         @include('includes.calendar')
         </div>
         <div id="event-details" style="margin-top: 20px; text-align: center;"></div>
-
-
 
         <hr>
 

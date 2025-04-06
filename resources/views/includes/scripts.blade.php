@@ -1,3 +1,5 @@
+{{--Kezdőoldal kép/szöveg --}}
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
     const imageArea = document.querySelector('.position-relative');
@@ -24,9 +26,9 @@
         console.warn("Figyelmeztetés: Az imageArea, overlay vagy textOverlay elem nem található.");
     }
 });
-
 </script>
 
+{{-- Kép lapozása --}}
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -74,13 +76,31 @@ document.addEventListener('DOMContentLoaded', function () {
         console.warn("Figyelmeztetés: A nextButton elem nem található.");
     }
 });
-
-
 </script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    
+{{--Kezdőoldal/Gombok --}}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const weatherBtn = document.getElementById('toggleWeatherBtn');
+      const calendarBtn = document.getElementById('toggleCalendarBtn');
+      const weatherBox = document.getElementById('idojarasCollapse');
+      const calendarBox = document.getElementById('naptarCollapse');
+  
+      weatherBtn.addEventListener('click', function () {
+        weatherBox.classList.toggle('show');
+      });
+  
+      calendarBtn.addEventListener('click', function () {
+        calendarBox.classList.toggle('show');
+      });
+    });
+  </script>
+  
+
+
+  
 
 
