@@ -10,6 +10,11 @@ Ez a projekt egy Laravel 11 alapú webalkalmazás, amely a Kondorfa település 
 - Testreszabott CSS stílus (kék színséma)  
 - SQLite adatbázis használata  
 
+## Főoldal képernyőképe
+
+![Főoldal](public/images/Homepage.png)
+
+
 ## Telepítés
 
 1. Klónozd a repót:
