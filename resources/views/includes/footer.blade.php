@@ -18,7 +18,7 @@
             
 
             <!-- Jobb oldal -->
-            <div class="col-md-4 text-md-end">
+            <div class="col-md-4 mb-3 mb-md-0 text-md-end">
                 <h6 class="mb-2">Kövess minket</h6>
                 <a href="https://www.facebook.com/profile.php?id=100070319796824"
                    class="text-white text-decoration-none"

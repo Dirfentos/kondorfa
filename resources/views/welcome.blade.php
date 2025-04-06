@@ -27,14 +27,21 @@
         
       <div> 
         
-        <div class="d-flex justify-content-center gap-3 my-4">
-          <button class="btn btn-primary" id="toggleWeatherBtn">Időjárás</button>
-          <button class="btn btn-primary" id="toggleCalendarBtn">Naptár</button>
+        <div class="d-flex justify-content-center my-4" style="gap: 6rem;">
+          <button id="toggleWeatherBtn" class="btn btn-primary">
+            <i class="fas fa-cloud-sun"></i> Időjárás
+          </button>
+          
+          <button id="toggleCalendarBtn" class="btn btn-primary">
+            <i class="fas fa-calendar-alt"></i> Naptár
+          </button>
+          
+        
         </div>
         
         
         @include('includes.weather', ['weatherData' => $weatherData ?? null, 'error' => $error ?? null])</div>
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center">
         @include('includes.calendar')
         </div>
         <div id="event-details" style="margin-top: 20px; text-align: center;"></div>
