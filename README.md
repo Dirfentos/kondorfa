@@ -51,3 +51,7 @@ php artisan serve
 ## Licenc
 
 Ez a projekt MIT licenc alatt érhető el.
+
+## Megjegyzés
+
+A képeket egy facebook csoportból szereztem, amelyben a falubeliek osztották meg a képeket, igyekeztem semmiképp sem beilleszteni személyt a projektbe
