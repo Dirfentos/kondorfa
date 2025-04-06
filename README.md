@@ -10,6 +10,11 @@ Ez a projekt egy Laravel 11 alapú webalkalmazás, amely a Kondorfa település 
 - Testreszabott CSS stílus (kék színséma)  
 - SQLite adatbázis használata  
 
+## Főoldal képernyőképe
+
+![Főoldal](public/images/Homepage.png)
+
+
 ## Telepítés
 
 1. Klónozd a repót:
@@ -51,3 +56,7 @@ php artisan serve
 ## Licenc
 
 Ez a projekt MIT licenc alatt érhető el.
+
+## Megjegyzés
+
+A képeket egy facebook csoportból szereztem, amelyben a falubeliek osztották meg a képeket, igyekeztem semmiképp sem beilleszteni személyt a projektbe
